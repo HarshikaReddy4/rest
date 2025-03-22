@@ -17,7 +17,7 @@ except LookupError:
 
 # Set page configuration
 st.set_page_config(
-    page_title="Restaurant Review Sentiment Analysis",
+    page_title="Mealytics :Mealytics: AI-Powered Dining Intelligence",
     page_icon="🍽️",
     layout="wide"
 )
