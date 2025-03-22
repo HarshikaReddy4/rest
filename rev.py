@@ -36,17 +36,32 @@ st.markdown("""
         border-radius: 0.5rem;
         background-color: #E8F5E9;
         border-left: 6px solid #4CAF50;
+        color: black !important;
     }
     .sentiment-negative {
         padding: 1.5rem;
         border-radius: 0.5rem;
         background-color: #FFEBEE;
         border-left: 6px solid #F44336;
+        color: black !important;
     }
     .highlight {
         background-color: #F5F5F5;
         padding: 1rem;
         border-radius: 0.5rem;
+        color: black !important;
+    }
+    /* Ensure all text in the report is black */
+    .sentiment-positive p, .sentiment-negative p, .sentiment-positive h4, .sentiment-negative h4,
+    .sentiment-positive span, .sentiment-negative span {
+        color: black !important;
+    }
+    /* Make sure highlighted words remain clearly visible */
+    span[style*="background-color: #E8F5E9"] {
+        color: black !important;
+    }
+    span[style*="background-color: #FFEBEE"] {
+        color: black !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -122,11 +137,11 @@ def highlight_sentiment_words(text):
     
     for word in positive_words:
         pattern = re.compile(re.escape(word), re.IGNORECASE)
-        highlighted_text = pattern.sub(f'<span style="background-color: #E8F5E9; padding: 0px 3px; border-radius: 3px;">{word}</span>', highlighted_text)
+        highlighted_text = pattern.sub(f'<span style="background-color: #E8F5E9; padding: 0px 3px; border-radius: 3px; color: black;">{word}</span>', highlighted_text)
     
     for word in negative_words:
         pattern = re.compile(re.escape(word), re.IGNORECASE)
-        highlighted_text = pattern.sub(f'<span style="background-color: #FFEBEE; padding: 0px 3px; border-radius: 3px;">{word}</span>', highlighted_text)
+        highlighted_text = pattern.sub(f'<span style="background-color: #FFEBEE; padding: 0px 3px; border-radius: 3px; color: black;">{word}</span>', highlighted_text)
     
     return highlighted_text
 
