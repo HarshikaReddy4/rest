@@ -1,7 +1,9 @@
-streamlit
+streamlit>=1.20.0
 pandas
 numpy
-nltk
-scikit-learn
 matplotlib
 seaborn
+transformers
+torch
+scikit-learn
+nltk
