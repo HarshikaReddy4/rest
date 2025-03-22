@@ -67,7 +67,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # App title and description
-st.title("🍽️ Restaurant Review Sentiment Analysis")
+st.title("🍽️ Mealytics :Mealytics: AI-Powered Dining Intelligence")
 st.markdown("""
 This application uses an advanced BERT model to classify restaurant reviews as positive or negative.
 The model is pre-trained on millions of examples and fine-tuned for sentiment analysis, providing
